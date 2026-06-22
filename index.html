@@ -27,117 +27,26 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body {
-      background: var(--bg);
-      color: var(--white);
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
+    body { background: var(--bg); color: var(--white); font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; line-height: 1.6; min-height: 100vh; }
 
-    /* ── HEADER ── */
-    header {
-      background: linear-gradient(135deg, #0d0d1a 0%, #1a0d33 50%, #0d0d1a 100%);
-      border-bottom: 1px solid var(--border);
-      padding: 2.5rem 2rem 2rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124,58,237,0.22) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .header-badge {
-      display: inline-block;
-      background: var(--purple-glow);
-      border: 1px solid rgba(124,58,237,0.4);
-      color: var(--purple-soft);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      padding: 0.3rem 1rem;
-      border-radius: 99px;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      font-size: clamp(1.6rem, 4vw, 2.6rem);
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: #fff;
-    }
+    header { background: linear-gradient(135deg, #0d0d1a 0%, #1a0d33 50%, #0d0d1a 100%); border-bottom: 1px solid var(--border); padding: 2.5rem 2rem 2rem; text-align: center; position: relative; overflow: hidden; }
+    header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(124,58,237,0.22) 0%, transparent 70%); pointer-events: none; }
+    .header-badge { display: inline-block; background: var(--purple-glow); border: 1px solid rgba(124,58,237,0.4); color: var(--purple-soft); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 99px; margin-bottom: 1rem; }
+    header h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.02em; color: #fff; }
     header h1 span { color: var(--purple-soft); }
-    .header-sub {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-top: 0.4rem;
-    }
-    .header-dates {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-top: 1rem;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 0.4rem 1rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
+    .header-sub { color: var(--muted); font-size: 0.9rem; margin-top: 0.4rem; }
+    .header-dates { display: inline-flex; align-items: center; gap: 0.6rem; margin-top: 1rem; background: var(--bg3); border: 1px solid var(--border); border-radius: 8px; padding: 0.4rem 1rem; font-size: 0.8rem; color: var(--muted); }
     .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--green); display: inline-block; animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      background: var(--green-soft);
-      border: 1px solid rgba(34,197,94,0.3);
-      color: var(--green);
-      border-radius: 99px;
-      padding: 0.2rem 0.8rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-left: 0.5rem;
-    }
+    .status-pill { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--green-soft); border: 1px solid rgba(34,197,94,0.3); color: var(--green); border-radius: 99px; padding: 0.2rem 0.8rem; font-size: 0.75rem; font-weight: 600; margin-left: 0.5rem; }
 
-    /* ── MAIN LAYOUT ── */
     main { max-width: 1180px; margin: 0 auto; padding: 2rem 1.2rem 4rem; }
 
-    /* ── SECTION TITLES ── */
-    .section-title {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--purple-soft);
-      margin-bottom: 1.4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-    }
+    .section-title { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--purple-soft); margin-bottom: 1.4rem; display: flex; align-items: center; gap: 0.7rem; }
     .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-    /* ── AVALIAÇÃO CARD ── */
-    .avaliacao {
-      background: linear-gradient(135deg, #1a1028 0%, #1a1a28 100%);
-      border: 1px solid rgba(124,58,237,0.35);
-      border-radius: 14px;
-      padding: 1.4rem 1.6rem;
-      margin-bottom: 2.4rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .avaliacao::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--purple), transparent);
-    }
+    .avaliacao { background: linear-gradient(135deg, #1a1028 0%, #1a1a28 100%); border: 1px solid rgba(124,58,237,0.35); border-radius: 14px; padding: 1.4rem 1.6rem; margin-bottom: 2.4rem; position: relative; overflow: hidden; }
+    .avaliacao::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, var(--purple), transparent); }
     .avaliacao-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
     .avaliacao h3 { color: var(--purple-soft); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.6rem; }
     .avaliacao p { color: #cbd5e1; font-size: 0.92rem; line-height: 1.7; margin-bottom: 0.5rem; }
@@ -145,84 +54,22 @@
     .avaliacao strong { color: var(--white); }
     .avaliacao .alert { color: var(--yellow); }
 
-    /* ── SUMMARY CARDS ── */
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2.4rem;
-    }
-    .metric-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.1rem 1rem;
-      text-align: center;
-      transition: border-color .2s, transform .2s;
-    }
+    .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-bottom: 2.4rem; }
+    .metric-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.1rem 1rem; text-align: center; transition: border-color .2s, transform .2s; }
     .metric-card:hover { border-color: rgba(124,58,237,0.5); transform: translateY(-1px); }
-    .metric-card.highlight {
-      background: linear-gradient(135deg, #1e1035 0%, #1a1a30 100%);
-      border-color: rgba(124,58,237,0.45);
-    }
-    .metric-card .label {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.4rem;
-    }
-    .metric-card .value {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1;
-    }
+    .metric-card.highlight { background: linear-gradient(135deg, #1e1035 0%, #1a1a30 100%); border-color: rgba(124,58,237,0.45); }
+    .metric-card .label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem; }
+    .metric-card .value { font-size: 1.5rem; font-weight: 800; color: var(--white); line-height: 1; }
     .metric-card.highlight .value { color: var(--purple-soft); }
-    .metric-card .sub {
-      font-size: 0.7rem;
-      color: var(--muted);
-      margin-top: 0.3rem;
-    }
+    .metric-card .sub { font-size: 0.7rem; color: var(--muted); margin-top: 0.3rem; }
     .metric-card .sub.good { color: var(--green); }
     .metric-card .sub.warn { color: var(--yellow); }
 
-    /* ── FUNNEL ── */
-    .funnel-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0;
-      margin-bottom: 3rem;
-    }
-    .funnel-stage {
-      width: 100%;
-      max-width: 720px;
-      position: relative;
-      transition: transform .2s;
-    }
+    .funnel-wrap { display: flex; flex-direction: column; align-items: center; gap: 0; margin-bottom: 3rem; }
+    .funnel-stage { width: 100%; max-width: 720px; position: relative; transition: transform .2s; }
     .funnel-stage:hover .funnel-inner { border-color: var(--purple-light); }
-
-    .funnel-connector {
-      width: 2px;
-      height: 18px;
-      background: linear-gradient(to bottom, rgba(124,58,237,0.6), rgba(124,58,237,0.2));
-      margin: 0 auto;
-    }
-
-    .funnel-inner {
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: var(--card);
-      padding: 0.9rem 1.4rem;
-      display: grid;
-      grid-template-columns: 2.2rem 1fr auto;
-      align-items: center;
-      gap: 1rem;
-      transition: border-color .2s;
-      margin: 0 auto;
-    }
+    .funnel-connector { width: 2px; height: 18px; background: linear-gradient(to bottom, rgba(124,58,237,0.6), rgba(124,58,237,0.2)); margin: 0 auto; }
+    .funnel-inner { border: 1px solid var(--border); border-radius: 12px; background: var(--card); padding: 0.9rem 1.4rem; display: grid; grid-template-columns: 2.2rem 1fr auto; align-items: center; gap: 1rem; transition: border-color .2s; margin: 0 auto; }
     .funnel-stage:nth-child(1) .funnel-inner  { max-width: 100%; border-color: rgba(124,58,237,0.5); background: linear-gradient(135deg,#1e1035,#1a1a28); }
     .funnel-stage:nth-child(3) .funnel-inner  { max-width: 97%; }
     .funnel-stage:nth-child(5) .funnel-inner  { max-width: 92%; }
@@ -231,201 +78,60 @@
     .funnel-stage:nth-child(11) .funnel-inner { max-width: 71%; }
     .funnel-stage:nth-child(13) .funnel-inner { max-width: 62%; }
     .funnel-stage:nth-child(15) .funnel-inner { max-width: 52%; border-color: rgba(34,197,94,0.45); background: linear-gradient(135deg,#0f2a1a,#1a1a28); }
-
-    .funnel-icon {
-      font-size: 1.4rem;
-      width: 2.2rem;
-      text-align: center;
-    }
-    .funnel-label {
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      line-height: 1.3;
-    }
-    .funnel-main-val {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.15;
-    }
+    .funnel-icon { font-size: 1.4rem; width: 2.2rem; text-align: center; }
+    .funnel-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); line-height: 1.3; }
+    .funnel-main-val { font-size: 1.2rem; font-weight: 800; color: var(--white); line-height: 1.15; }
     .funnel-stage:nth-child(15) .funnel-main-val { color: #4ade80; }
-    .funnel-sub-val {
-      font-size: 0.72rem;
-      color: var(--purple-soft);
-      font-weight: 600;
-    }
+    .funnel-sub-val { font-size: 0.72rem; color: var(--purple-soft); font-weight: 600; }
     .funnel-sub-val.green { color: var(--green); }
     .funnel-sub-val.yellow { color: var(--yellow); }
-
-    .funnel-right {
-      text-align: right;
-      min-width: 100px;
-    }
-    .funnel-badge {
-      display: inline-block;
-      background: var(--purple-muted);
-      border: 1px solid rgba(124,58,237,0.25);
-      color: var(--purple-soft);
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.2rem 0.6rem;
-      border-radius: 6px;
-      margin-bottom: 0.3rem;
-    }
-    .funnel-rate {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--white);
-    }
+    .funnel-right { text-align: right; min-width: 100px; }
+    .funnel-badge { display: inline-block; background: var(--purple-muted); border: 1px solid rgba(124,58,237,0.25); color: var(--purple-soft); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 6px; margin-bottom: 0.3rem; }
+    .funnel-rate { font-size: 0.85rem; font-weight: 700; color: var(--white); }
     .funnel-rate-label { font-size: 0.62rem; color: var(--muted); font-weight: 400; }
-
-    .funnel-meta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-top: 0.8rem;
-      padding: 0.5rem 1rem;
-      background: rgba(245,158,11,0.08);
-      border: 1px solid rgba(245,158,11,0.2);
-      border-radius: 8px;
-      font-size: 0.8rem;
-      color: var(--muted);
-      max-width: 460px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-    }
+    .funnel-meta { display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 0.8rem; padding: 0.5rem 1rem; background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.2); border-radius: 8px; font-size: 0.8rem; color: var(--muted); max-width: 460px; margin-left: auto; margin-right: auto; text-align: center; }
     .funnel-meta strong { color: var(--yellow); }
 
-    /* ── TABLE (transposed / generic) ── */
     .table-wrap { overflow-x: auto; margin-bottom: 1rem; border-radius: 12px; border: 1px solid var(--border); }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.78rem;
-      min-width: 1080px;
-    }
-    thead th {
-      background: var(--bg3);
-      padding: 0.6rem 0.55rem;
-      text-align: center;
-      font-size: 0.62rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      color: var(--muted);
-      white-space: nowrap;
-      border-bottom: 1px solid var(--border);
-    }
+    table { width: 100%; border-collapse: collapse; font-size: 0.78rem; min-width: 1180px; }
+    thead th { background: var(--bg3); padding: 0.6rem 0.5rem; text-align: center; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.02em; text-transform: uppercase; color: var(--muted); white-space: nowrap; border-bottom: 1px solid var(--border); }
     thead th.metric-col { text-align: left; position: sticky; left: 0; background: var(--bg3); z-index: 2; }
     thead th.day-best { color: var(--green); background: rgba(34,197,94,0.06); }
-    thead th .th-sub { display:block; font-size:0.54rem; font-weight:600; color:var(--purple-soft); letter-spacing:0.02em; margin-top:2px; }
+    thead th .th-sub { display:block; font-size:0.52rem; font-weight:600; color:var(--purple-soft); letter-spacing:0.02em; margin-top:2px; }
     thead th.day-best .th-sub { color: var(--green); }
     thead th.col-total { color: var(--purple-soft); background: var(--purple-muted); }
-
-    tbody td {
-      padding: 0.5rem 0.55rem;
-      text-align: center;
-      white-space: nowrap;
-      border-bottom: 1px solid rgba(42,42,61,0.5);
-    }
-    tbody td.metric-name {
-      text-align: left;
-      font-weight: 600;
-      color: var(--white);
-      font-size: 0.75rem;
-      position: sticky;
-      left: 0;
-      background: var(--bg);
-      z-index: 1;
-    }
-    tbody td.metric-name small { display:block; font-weight:400; color:var(--muted); font-size:0.62rem; }
+    tbody td { padding: 0.5rem 0.5rem; text-align: center; white-space: nowrap; border-bottom: 1px solid rgba(42,42,61,0.5); }
+    tbody td.metric-name { text-align: left; font-weight: 600; color: var(--white); font-size: 0.74rem; position: sticky; left: 0; background: var(--bg); z-index: 1; }
+    tbody td.metric-name small { display:block; font-weight:400; color:var(--muted); font-size:0.6rem; }
     tbody td.col-total { color: var(--purple-soft); font-weight: 700; background: var(--purple-muted); }
     tbody td.day-best { background: rgba(34,197,94,0.05); }
     tbody tr:hover td { background: rgba(124,58,237,0.05); }
     tbody tr:hover td.metric-name { background: #14141f; }
     tbody tr:hover td.col-total { background: rgba(124,58,237,0.12); }
-
-    tr.cat-row td {
-      background: #13131d;
-      text-align: left;
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--purple-soft);
-      padding: 0.4rem 0.55rem;
-      border-bottom: 1px solid var(--border);
-    }
+    tr.cat-row td { background: #13131d; text-align: left; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--purple-soft); padding: 0.4rem 0.5rem; border-bottom: 1px solid var(--border); }
     tr.cat-row td.metric-name { position: sticky; left: 0; background: #13131d; }
     tr.row-hl td { background: rgba(124,58,237,0.07); }
     tr.row-hl td.metric-name { color: #fff; background: #16121f; }
     tr.row-hl:hover td { background: rgba(124,58,237,0.12); }
-
     .cpl-good { color: var(--green) !important; font-weight: 700; }
     .cpl-warn { color: var(--yellow) !important; font-weight: 700; }
     .cpl-bad  { color: #f87171 !important; font-weight: 700; }
-
-    .table-note {
-      font-size: 0.73rem;
-      color: var(--muted);
-      margin-bottom: 2.4rem;
-      padding: 0 0.4rem;
-      line-height: 1.6;
-    }
+    .table-note { font-size: 0.73rem; color: var(--muted); margin-bottom: 2.4rem; padding: 0 0.4rem; line-height: 1.6; }
     .table-note strong { color: var(--purple-soft); }
 
-    /* ── CREATIVES TABLE ── */
     .cre-wrap { overflow-x: auto; margin-bottom: 1rem; border-radius: 12px; border: 1px solid var(--border); }
-    table.cre {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.8rem;
-      min-width: 900px;
-    }
-    table.cre thead th {
-      background: var(--bg3);
-      padding: 0.7rem 0.7rem;
-      text-align: center;
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--muted);
-      white-space: nowrap;
-      border-bottom: 1px solid var(--border);
-    }
+    table.cre { width: 100%; border-collapse: collapse; font-size: 0.8rem; min-width: 900px; }
+    table.cre thead th { background: var(--bg3); padding: 0.7rem 0.7rem; text-align: center; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); white-space: nowrap; border-bottom: 1px solid var(--border); }
     table.cre thead th.name-col { text-align: left; }
     table.cre thead th.lead-col { color: var(--green); background: rgba(34,197,94,0.06); }
-    table.cre tbody td {
-      padding: 0.55rem 0.7rem;
-      text-align: center;
-      white-space: nowrap;
-      border-bottom: 1px solid rgba(42,42,61,0.5);
-      vertical-align: middle;
-    }
+    table.cre tbody td { padding: 0.55rem 0.7rem; text-align: center; white-space: nowrap; border-bottom: 1px solid rgba(42,42,61,0.5); vertical-align: middle; }
     table.cre tbody tr:hover td { background: rgba(124,58,237,0.05); }
     table.cre tbody tr.top1 td { background: rgba(34,197,94,0.06); }
     table.cre tbody tr.top1:hover td { background: rgba(34,197,94,0.1); }
     .cre-rank { font-weight: 800; color: var(--muted); font-size: 0.78rem; }
     tr.top1 .cre-rank { color: var(--green); }
     .cre-name { text-align: left !important; }
-    .cre-name a {
-      color: var(--white);
-      font-weight: 600;
-      text-decoration: none;
-      border-bottom: 1px dashed rgba(167,139,250,0.5);
-      transition: color .15s;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
+    .cre-name a { color: var(--white); font-weight: 600; text-decoration: none; border-bottom: 1px dashed rgba(167,139,250,0.5); transition: color .15s; display: inline-flex; align-items: center; gap: 0.35rem; }
     .cre-name a:hover { color: var(--purple-soft); border-bottom-color: var(--purple-soft); }
     .cre-name a .drv { font-size: 0.7rem; opacity: 0.7; }
     .cre-lead { font-weight: 800; color: #4ade80 !important; font-size: 0.92rem; background: rgba(34,197,94,0.06); }
@@ -433,867 +139,212 @@
     .cre-total td { background: linear-gradient(90deg, #1e1035, #1a1a28); border-top: 2px solid var(--purple); font-weight: 700; color: var(--white); }
     .cre-total td.cre-name { color: var(--purple-soft); }
 
-    /* ── FOOTER ── */
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.75rem;
-    }
-    footer strong { color: var(--purple-soft); }
+    /* per-campaign table */
+    table.camp { width:100%; border-collapse:collapse; font-size:0.82rem; min-width:760px; }
+    table.camp thead th { background:var(--bg3); padding:0.6rem 0.8rem; text-align:center; font-size:0.62rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted); white-space:nowrap; border-bottom:1px solid var(--border); }
+    table.camp thead th.name-col { text-align:left; }
+    table.camp tbody td { padding:0.55rem 0.8rem; text-align:center; white-space:nowrap; border-bottom:1px solid rgba(42,42,61,0.5); }
+    table.camp tbody td.cname { text-align:left; font-weight:600; color:var(--white); }
+    table.camp tbody tr:hover td { background:rgba(124,58,237,0.05); }
+    .pill { font-size:0.58rem; font-weight:700; letter-spacing:0.04em; padding:0.1rem 0.45rem; border-radius:5px; }
+    .pill.on { background:var(--green-soft); border:1px solid rgba(34,197,94,0.3); color:var(--green); }
+    .pill.off { background:rgba(148,163,184,0.12); border:1px solid rgba(148,163,184,0.25); color:var(--muted); }
 
-    @media (max-width: 600px) {
-      .funnel-right { display: none; }
-    }
+    footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.75rem; }
+    footer strong { color: var(--purple-soft); }
+    @media (max-width: 600px) { .funnel-right { display: none; } }
   </style>
 </head>
 <body>
 
-<!-- ══════════════ HEADER ══════════════ -->
 <header>
   <div class="header-badge">VOA CONHECIMENTO · BNCP002</div>
   <h1>Relatório de <span>Captação</span></h1>
   <div class="header-sub">Campanhas de Leads · Meta Ads · P-Advantage CBO · Página V1</div>
   <div class="header-dates">
     <span class="dot"></span>
-    13 de Junho — 21 de Junho de 2026
+    13 de Junho — 22 de Junho de 2026
     <span class="status-pill"><span class="dot"></span> Ativa</span>
   </div>
 </header>
 
-<!-- ══════════════ MAIN ══════════════ -->
 <main>
 
-  <!-- AVALIAÇÃO -->
   <div class="avaliacao">
     <div class="avaliacao-icon">💬</div>
     <h3>Avaliação do Funil</h3>
     <p>
-      9 dias no ar. A operação escalou (3 → 7 campanhas em 18/Jun) e o leque de criativos cresceu para <strong>31 com leads</strong> — entraram vários da 2ª leva (VERMELHO, BANCO, JÁ ENTROU) e os primeiros <strong>criativos de imagem (ADI)</strong>. No acumulado já são <strong>2.988 leads</strong> com CPL médio de <strong>R$2,18</strong>.
+      10 dias no ar. A operação escalou para <strong>~10 campanhas</strong> e o investimento acelerou (R$1.168 no dia 21), rumo à meta semanal de <strong>R$15.373</strong>. No acumulado: <strong>3.609 leads</strong> com CPL médio de <strong>R$2,18</strong> — ainda acima da meta de <strong>R$1,75</strong>, num platô de ~R$2,5 nos dias de pico.
     </p>
     <p>
-      <span class="alert">⚠️ Atenção:</span> o CPL estabilizou num <strong>platô alto</strong> — 18/Jun R$2,32 · 19/Jun R$2,77 · 20/Jun R$2,49 · 21/Jun (parcial) R$2,75 — sem voltar aos níveis dos melhores dias (14–16/Jun, R$1,53–1,80) e acima da meta de R$1,75. É sinal de <strong>saturação</strong> conforme a frequência sobe. <strong>ADV07 + ADV05 ainda concentram 85% dos leads.</strong> As exclusões de público (compradores + envolvimento 365 IG/FB) seguem como a alavanca recomendada para liberar público novo e baixar o custo.
+      <span class="alert">⚠️ Hoje (22/Jun) é dia de otimização de criativos</span> (subindo os vencedores, desligando os ruins) — por isso o <strong>Hook Rate e o CTR do dia estão distorcidos pelo reaprendizado</strong>; a leitura limpa vem em 2–3 dias. Destaques: <strong>ADV07 + ADV05 = 78% dos leads</strong>; o criativo de imagem <strong>ADI03 (Evento Gratuita)</strong> virou o melhor CPL de alto volume (R$1,54); e a campanha <strong>[08] é a mais eficiente (R$1,36)</strong>. Caminho pra baixar o CPL ao escalar: concentrar verba nas eficientes ([08], frios, ADI03), pausar as caras ([06], [10] quente) e aplicar as exclusões de público.
     </p>
   </div>
 
-  <!-- SUMMARY CARDS -->
-  <div class="section-title">Visão Geral · 13–21 Jun 2026 · 7 campanhas</div>
+  <div class="section-title">Visão Geral · 13–22 Jun 2026 · ~10 campanhas</div>
   <div class="summary-grid">
-    <div class="metric-card highlight">
-      <div class="label">Investimento</div>
-      <div class="value">R$6.516</div>
-      <div class="sub warn">+13,83% imp → R$7.417</div>
-    </div>
-    <div class="metric-card">
-      <div class="label">Impressões</div>
-      <div class="value">446.045</div>
-      <div class="sub">CPM médio R$14,61</div>
-    </div>
-    <div class="metric-card">
-      <div class="label">Alcance</div>
-      <div class="value">~361K</div>
-      <div class="sub">Freq. média 1,23</div>
-    </div>
-    <div class="metric-card">
-      <div class="label">Hook Rate</div>
-      <div class="value">35,4%</div>
-      <div class="sub">157.690 plays de 3s</div>
-    </div>
-    <div class="metric-card">
-      <div class="label">Cliques no Link</div>
-      <div class="value">8.883</div>
-      <div class="sub">CTR Link 1,99%</div>
-    </div>
-    <div class="metric-card">
-      <div class="label">Vis. de Página</div>
-      <div class="value">6.666</div>
-      <div class="sub">Connect Rate 75,0%</div>
-    </div>
-    <div class="metric-card highlight">
-      <div class="label">Total de Leads</div>
-      <div class="value">2.988</div>
-      <div class="sub warn">CPL Médio R$2,18</div>
-    </div>
-    <div class="metric-card">
-      <div class="label">Meta de CPL</div>
-      <div class="value">R$1,75</div>
-      <div class="sub warn">acima · platô ~R$2,5–2,8</div>
-    </div>
+    <div class="metric-card highlight"><div class="label">Investimento</div><div class="value">R$7.885</div><div class="sub warn">+13,83% imp → R$8.976</div></div>
+    <div class="metric-card"><div class="label">Impressões</div><div class="value">546.711</div><div class="sub">CPM médio R$14,42</div></div>
+    <div class="metric-card"><div class="label">Alcance</div><div class="value">~441K</div><div class="sub">Freq. média 1,24</div></div>
+    <div class="metric-card"><div class="label">Hook Rate</div><div class="value">32,4%</div><div class="sub">distorcido nos últ. 2 dias</div></div>
+    <div class="metric-card"><div class="label">Cliques no Link</div><div class="value">10.559</div><div class="sub">CTR Link 1,93%</div></div>
+    <div class="metric-card"><div class="label">Vis. de Página</div><div class="value">7.932</div><div class="sub">Connect Rate 75,1%</div></div>
+    <div class="metric-card highlight"><div class="label">Total de Leads</div><div class="value">3.609</div><div class="sub warn">CPL Médio R$2,18</div></div>
+    <div class="metric-card"><div class="label">Meta de CPL</div><div class="value">R$1,75</div><div class="sub warn">acima · platô ~R$2,5</div></div>
   </div>
 
-  <!-- FUNIL -->
-  <div class="section-title">Funil de Captação · Total Acumulado (13–21 Jun)</div>
+  <div class="section-title">Funil de Captação · Total Acumulado (13–22 Jun)</div>
   <div class="funnel-wrap">
-
-    <!-- 1. INVESTIMENTO -->
-    <div class="funnel-stage">
-      <div class="funnel-inner">
-        <div class="funnel-icon">💰</div>
-        <div>
-          <div class="funnel-label">Investimento</div>
-          <div class="funnel-main-val">R$ 6.515,56</div>
-          <div class="funnel-sub-val yellow">Com impostos (13,83%): R$ 7.416,66</div>
-        </div>
-        <div class="funnel-right"><div class="funnel-badge">Topo do Funil</div></div>
-      </div>
-    </div>
+    <div class="funnel-stage"><div class="funnel-inner"><div class="funnel-icon">💰</div><div><div class="funnel-label">Investimento</div><div class="funnel-main-val">R$ 7.885,03</div><div class="funnel-sub-val yellow">Com impostos (13,83%): R$ 8.975,53</div></div><div class="funnel-right"><div class="funnel-badge">Topo do Funil</div></div></div></div>
     <div class="funnel-connector"></div>
-
-    <!-- 2. CPM + IMPRESSÕES -->
-    <div class="funnel-stage">
-      <div class="funnel-inner">
-        <div class="funnel-icon">📡</div>
-        <div>
-          <div class="funnel-label">CPM · Impressões</div>
-          <div class="funnel-main-val">446.045 <span style="font-size:.9rem;color:var(--muted)">impressões</span></div>
-          <div class="funnel-sub-val">CPM Médio: R$ 14,61</div>
-        </div>
-        <div class="funnel-right"><div class="funnel-rate-label">Custo por mil</div><div class="funnel-rate">R$ 14,61</div></div>
-      </div>
-    </div>
+    <div class="funnel-stage"><div class="funnel-inner"><div class="funnel-icon">📡</div><div><div class="funnel-label">CPM · Impressões</div><div class="funnel-main-val">546.711 <span style="font-size:.9rem;color:var(--muted)">impressões</span></div><div class="funnel-sub-val">CPM Médio: R$ 14,42</div></div><div class="funnel-right"><div class="funnel-rate-label">Custo por mil</div><div class="funnel-rate">R$ 14,42</div></div></div></div>
     <div class="funnel-connector"></div>
-
-    <!-- 3. ALCANCE + FREQUÊNCIA -->
-    <div class="funnel-stage">
-      <div class="funnel-inner">
-        <div class="funnel-icon">👥</div>
-        <div>
-          <div class="funnel-label">Alcance · Frequência</div>
-          <div class="funnel-main-val">~360.761 <span style="font-size:.9rem;color:var(--muted)">pessoas únicas</span></div>
-          <div class="funnel-sub-val">Frequência média: 1,23×</div>
-        </div>
-        <div class="funnel-right"><div class="funnel-rate-label">Freq. média</div><div class="funnel-rate">1,23×</div></div>
-      </div>
-    </div>
+    <div class="funnel-stage"><div class="funnel-inner"><div class="funnel-icon">👥</div><div><div class="funnel-label">Alcance · Frequência</div><div class="funnel-main-val">~441.355 <span style="font-size:.9rem;color:var(--muted)">pessoas únicas</span></div><div class="funnel-sub-val">Frequência média: 1,24×</div></div><div class="funnel-right"><div class="funnel-rate-label">Freq. média</div><div class="funnel-rate">1,24×</div></div></div></div>
     <div class="funnel-connector"></div>
-
-    <!-- 4. HOOK RATE -->
-    <div class="funnel-stage">
-      <div class="funnel-inner">
-        <div class="funnel-icon">🎬</div>
-        <div>
-          <div class="funnel-label">Hook Rate <span style="font-size:.6rem;font-weight:400;color:var(--muted)">(plays de 3s ÷ impressões)</span></div>
-          <div class="funnel-main-val">35,4% <span style="font-size:.9rem;color:var(--muted)">retenção inicial</span></div>
-          <div class="funnel-sub-val">157.690 reproduções de 3 segundos</div>
-        </div>
-        <div class="funnel-right"><div class="funnel-badge">Hook Rate</div><div class="funnel-rate">35,4%</div></div>
-      </div>
-    </div>
+    <div class="funnel-stage"><div class="funnel-inner"><div class="funnel-icon">🎬</div><div><div class="funnel-label">Hook Rate <span style="font-size:.6rem;font-weight:400;color:var(--muted)">(plays de 3s ÷ impressões)</span></div><div class="funnel-main-val">32,4% <span style="font-size:.9rem;color:var(--muted)">retenção inicial</span></div><div class="funnel-sub-val">média do período (últimos 2 dias distorcidos)</div></div><div class="funnel-right"><div class="funnel-badge">Hook Rate</div><div class="funnel-rate">32,4%</div></div></div></div>
     <div class="funnel-connector"></div>
-
-    <!-- 5. CLIQUES NO LINK + CPC -->
-    <div class="funnel-stage">
-      <div class="funnel-inner">
-        <div class="funnel-icon">🖱️</div>
-        <div>
-          <div class="funnel-label">Cliques no Link · CPC</div>
-          <div class="funnel-main-val">8.883 <span style="font-size:.9rem;color:var(--muted)">cliques</span></div>
-          <div class="funnel-sub-val">CPC no Link: R$ 0,73 &nbsp;·&nbsp; CTR Geral: 3,34%</div>
-        </div>
-        <div class="funnel-right"><div class="funnel-rate-label">CPC Link</div><div class="funnel-rate">R$ 0,73</div></div>
-      </div>
-    </div>
+    <div class="funnel-stage"><div class="funnel-inner"><div class="funnel-icon">🖱️</div><div><div class="funnel-label">Cliques no Link · CPC</div><div class="funnel-main-val">10.559 <span style="font-size:.9rem;color:var(--muted)">cliques</span></div><div class="funnel-sub-val">CPC no Link: R$ 0,75 &nbsp;·&nbsp; CTR Geral: 3,21%</div></div><div class="funnel-right"><div class="funnel-rate-label">CPC Link</div><div class="funnel-rate">R$ 0,75</div></div></div></div>
     <div class="funnel-connector"></div>
-
-    <!-- 6. CTR DO LINK -->
-    <div class="funnel-stage">
-      <div class="funnel-inner">
-        <div class="funnel-icon">📊</div>
-        <div>
-          <div class="funnel-label">CTR do Clique no Link</div>
-          <div class="funnel-main-val">1,99% <span style="font-size:.9rem;color:var(--muted)">CTR link médio</span></div>
-          <div class="funnel-sub-val">Melhor: 16/Jun → 2,26%</div>
-        </div>
-        <div class="funnel-right"><div class="funnel-rate-label">CTR Link</div><div class="funnel-rate">1,99%</div></div>
-      </div>
-    </div>
+    <div class="funnel-stage"><div class="funnel-inner"><div class="funnel-icon">📊</div><div><div class="funnel-label">CTR do Clique no Link</div><div class="funnel-main-val">1,93% <span style="font-size:.9rem;color:var(--muted)">CTR link médio</span></div><div class="funnel-sub-val">Melhor: 16/Jun → 2,26%</div></div><div class="funnel-right"><div class="funnel-rate-label">CTR Link</div><div class="funnel-rate">1,93%</div></div></div></div>
     <div class="funnel-connector"></div>
-
-    <!-- 7. VISUALIZAÇÕES DE PÁGINA + CONNECT RATE -->
-    <div class="funnel-stage">
-      <div class="funnel-inner">
-        <div class="funnel-icon">📄</div>
-        <div>
-          <div class="funnel-label">Visualizações de Página</div>
-          <div class="funnel-main-val">6.666 <span style="font-size:.9rem;color:var(--muted)">page views</span></div>
-          <div class="funnel-sub-val green">Connect Rate: 75,0% &nbsp;·&nbsp; Custo/Vis.: R$ 0,98</div>
-        </div>
-        <div class="funnel-right"><div class="funnel-badge">Connect Rate</div><div class="funnel-rate" style="color:var(--green)">75,0%</div><div class="funnel-rate-label">page views ÷ cliques</div></div>
-      </div>
-    </div>
+    <div class="funnel-stage"><div class="funnel-inner"><div class="funnel-icon">📄</div><div><div class="funnel-label">Visualizações de Página</div><div class="funnel-main-val">7.932 <span style="font-size:.9rem;color:var(--muted)">page views</span></div><div class="funnel-sub-val green">Connect Rate: 75,1% &nbsp;·&nbsp; Custo/Vis.: R$ 0,99</div></div><div class="funnel-right"><div class="funnel-badge">Connect Rate</div><div class="funnel-rate" style="color:var(--green)">75,1%</div><div class="funnel-rate-label">page views ÷ cliques</div></div></div></div>
     <div class="funnel-connector"></div>
-
-    <!-- 8. LEADS -->
-    <div class="funnel-stage">
-      <div class="funnel-inner">
-        <div class="funnel-icon">🎯</div>
-        <div>
-          <div class="funnel-label">Leads Captados</div>
-          <div class="funnel-main-val" style="color:#4ade80">2.988 leads</div>
-          <div class="funnel-sub-val yellow">CPL s/ imp: R$ 2,18 &nbsp;·&nbsp; CPL c/ imp: R$ 2,48</div>
-        </div>
-        <div class="funnel-right"><div class="funnel-badge" style="background:var(--green-soft);border-color:rgba(34,197,94,.35);color:var(--green)">CPL Médio</div><div class="funnel-rate" style="color:#4ade80;font-size:1.3rem">R$ 2,18</div><div class="funnel-rate-label">s/ impostos</div></div>
-      </div>
-    </div>
-
-    <!-- META BADGE -->
-    <div class="funnel-meta">
-      Meta de CPL: <strong>R$ 1,75</strong> &nbsp;·&nbsp; Acumulado: <strong>R$ 2,18</strong> (acima — CPL em platô alto)
-    </div>
-
+    <div class="funnel-stage"><div class="funnel-inner"><div class="funnel-icon">🎯</div><div><div class="funnel-label">Leads Captados</div><div class="funnel-main-val" style="color:#4ade80">3.609 leads</div><div class="funnel-sub-val yellow">CPL s/ imp: R$ 2,18 &nbsp;·&nbsp; CPL c/ imp: R$ 2,49</div></div><div class="funnel-right"><div class="funnel-badge" style="background:var(--green-soft);border-color:rgba(34,197,94,.35);color:var(--green)">CPL Médio</div><div class="funnel-rate" style="color:#4ade80;font-size:1.3rem">R$ 2,18</div><div class="funnel-rate-label">s/ impostos</div></div></div></div>
+    <div class="funnel-meta">Meta de CPL: <strong>R$ 1,75</strong> &nbsp;·&nbsp; Acumulado: <strong>R$ 2,18</strong> (acima — escalando rumo a R$15.373/sem)</div>
   </div>
 
-  <!-- TABELA DIÁRIA (TRANSPOSTA) -->
+  <!-- POR CAMPANHA -->
+  <div class="section-title">Por Campanha · Orçamento, CPL e Saturação (período de cada uma)</div>
+  <div class="cre-wrap">
+    <table class="camp">
+      <thead>
+        <tr><th class="name-col">Campanha</th><th>Status</th><th>Orç./dia</th><th>Leads</th><th>Investido</th><th>CPL</th><th>CPM</th><th>Freq.</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="cname">[01] P-Advantage</td><td><span class="pill on">Ativa</span></td><td>R$ 250</td><td>1.114</td><td>R$ 2.211</td><td class="cpl-good">R$ 1,98</td><td>R$ 11,67</td><td>1,28</td></tr>
+        <tr><td class="cname">[02] P-Advantage</td><td><span class="pill on">Ativa</span></td><td>R$ 250</td><td>1.023</td><td>R$ 2.257</td><td class="cpl-warn">R$ 2,21</td><td>R$ 15,44</td><td>1,21</td></tr>
+        <tr><td class="cname">[03] P-Advantage</td><td><span class="pill on">Ativa</span></td><td>R$ 250</td><td>988</td><td>R$ 2.207</td><td class="cpl-warn">R$ 2,23</td><td>R$ 16,75</td><td>1,24</td></tr>
+        <tr><td class="cname">[08] P-Advantage</td><td><span class="pill on">Ativa</span></td><td>R$ 200</td><td>145</td><td>R$ 197</td><td class="cpl-good">R$ 1,36 ⭐</td><td>R$ 10,30</td><td>1,24</td></tr>
+        <tr><td class="cname">[09] FRIO LL1%</td><td><span class="pill on">Ativa</span></td><td>R$ 100</td><td>94</td><td>R$ 159</td><td class="cpl-good">R$ 1,69</td><td>R$ 12,17</td><td>1,18</td></tr>
+        <tr><td class="cname">[06] P-Advantage</td><td><span class="pill on">Ativa</span></td><td>R$ 60</td><td>71</td><td>R$ 244</td><td class="cpl-warn">R$ 3,43</td><td>R$ 17,96</td><td>1,11</td></tr>
+        <tr><td class="cname">[07] FRIO LL1%</td><td><span class="pill off">Pausada</span></td><td>R$ 60</td><td>64</td><td>R$ 180</td><td class="cpl-warn">R$ 2,81</td><td>R$ 18,10</td><td>1,12</td></tr>
+        <tr><td class="cname">[05] P-Advantage</td><td><span class="pill off">Pausada</span></td><td>R$ 60</td><td>57</td><td>R$ 176</td><td class="cpl-warn">R$ 3,09</td><td>R$ 16,63</td><td>1,10</td></tr>
+        <tr><td class="cname">[04] P-Advantage</td><td><span class="pill off">Pausada</span></td><td>R$ 60</td><td>48</td><td>R$ 182</td><td class="cpl-bad">R$ 3,80</td><td>R$ 15,83</td><td>1,28</td></tr>
+        <tr><td class="cname">[10] QUENTE</td><td><span class="pill on">Ativa</span></td><td>R$ 30</td><td>5</td><td>R$ 71</td><td class="cpl-bad">R$ 14,17</td><td>R$ 52,21</td><td>4,05</td></tr>
+        <tr><td class="cname">[11] P-Advantage</td><td><span class="pill on">Ativa</span></td><td>R$ 100</td><td>0</td><td>R$ 0</td><td>—</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="table-note">
+    🔎 As <strong>3 grandes ([01][02][03])</strong> carregam <strong>87% dos leads</strong> (CPL R$1,98–2,23) mas já saturam (CPM R$15–17). A <strong>[08]</strong> é a mais barata (R$1,36) — candidata a escalar. <strong>[10] QUENTE</strong> (CPL R$14, freq 4,05) e <strong>[06]</strong> (R$3,43) são as a pausar. <strong>[11]</strong> subiu hoje, ainda sem entrega.
+  </p>
+
   <div class="section-title">Desempenho por Dia · Todas as Métricas do Funil</div>
   <div class="table-wrap">
     <table>
       <thead>
         <tr>
           <th class="metric-col">Métrica</th>
-          <th>13/Jun</th>
-          <th class="day-best">14/Jun <span class="th-sub">⭐ melhor</span></th>
-          <th>15/Jun</th>
-          <th>16/Jun</th>
-          <th>17/Jun</th>
-          <th>18/Jun</th>
-          <th>19/Jun</th>
-          <th>20/Jun</th>
-          <th>21/Jun <span class="th-sub">parcial*</span></th>
+          <th>13</th>
+          <th class="day-best">14 <span class="th-sub">⭐</span></th>
+          <th>15</th>
+          <th>16</th>
+          <th>17</th>
+          <th>18</th>
+          <th>19</th>
+          <th>20</th>
+          <th>21</th>
+          <th>22 <span class="th-sub">parc.*</span></th>
           <th class="col-total">Total</th>
         </tr>
       </thead>
       <tbody>
-        <!-- INVESTIMENTO -->
-        <tr class="cat-row"><td class="metric-name" colspan="11">💰 Investimento</td></tr>
-        <tr class="row-hl">
-          <td class="metric-name">Investimento</td>
-          <td>R$ 246</td>
-          <td class="day-best">R$ 621</td>
-          <td>R$ 569</td>
-          <td>R$ 773</td>
-          <td>R$ 792</td>
-          <td>R$ 1.022</td>
-          <td>R$ 876</td>
-          <td>R$ 948</td>
-          <td>R$ 668</td>
-          <td class="col-total">R$ 6.516</td>
-        </tr>
-        <tr>
-          <td class="metric-name">Invest. c/ imposto <small>+13,83%</small></td>
-          <td>R$ 280</td>
-          <td class="day-best">R$ 707</td>
-          <td>R$ 648</td>
-          <td>R$ 880</td>
-          <td>R$ 902</td>
-          <td>R$ 1.163</td>
-          <td>R$ 997</td>
-          <td>R$ 1.079</td>
-          <td>R$ 761</td>
-          <td class="col-total">R$ 7.417</td>
-        </tr>
-
-        <!-- ALCANCE -->
-        <tr class="cat-row"><td class="metric-name" colspan="11">📡 Alcance & Entrega</td></tr>
-        <tr>
-          <td class="metric-name">Impressões</td>
-          <td>16.494</td>
-          <td class="day-best">41.191</td>
-          <td>52.350</td>
-          <td>51.618</td>
-          <td>50.014</td>
-          <td>73.408</td>
-          <td>62.314</td>
-          <td>59.476</td>
-          <td>39.180</td>
-          <td class="col-total">446.045</td>
-        </tr>
-        <tr>
-          <td class="metric-name">CPM</td>
-          <td class="cpl-warn">R$ 14,94</td>
-          <td class="day-best">R$ 15,09</td>
-          <td class="cpl-good">R$ 10,87</td>
-          <td>R$ 14,97</td>
-          <td>R$ 15,84</td>
-          <td class="cpl-good">R$ 13,92</td>
-          <td>R$ 14,06</td>
-          <td>R$ 15,93</td>
-          <td class="cpl-bad">R$ 17,05</td>
-          <td class="col-total">R$ 14,61</td>
-        </tr>
-        <tr>
-          <td class="metric-name">Alcance</td>
-          <td>16.327</td>
-          <td class="day-best">35.822</td>
-          <td>48.779</td>
-          <td>47.974</td>
-          <td>46.957</td>
-          <td>69.396</td>
-          <td>58.301</td>
-          <td>57.483</td>
-          <td>37.467</td>
-          <td class="col-total">~360.761†</td>
-        </tr>
-        <tr>
-          <td class="metric-name">Frequência</td>
-          <td>1,01×</td>
-          <td class="day-best">1,15×</td>
-          <td>1,07×</td>
-          <td>1,08×</td>
-          <td>1,07×</td>
-          <td>1,06×</td>
-          <td>1,07×</td>
-          <td>1,03×</td>
-          <td>1,05×</td>
-          <td class="col-total">1,23×†</td>
-        </tr>
-
-        <!-- VÍDEO & CLIQUE -->
-        <tr class="cat-row"><td class="metric-name" colspan="11">🎬 Vídeo & Clique</td></tr>
-        <tr>
-          <td class="metric-name">Hook Rate <small>3s ÷ impr.</small></td>
-          <td>33,9%</td>
-          <td class="day-best">32,5%</td>
-          <td>35,5%</td>
-          <td>36,3%</td>
-          <td>35,0%</td>
-          <td>34,6%</td>
-          <td>36,3%</td>
-          <td class="cpl-good">37,9%</td>
-          <td>34,0%</td>
-          <td class="col-total">35,4%</td>
-        </tr>
-        <tr class="row-hl">
-          <td class="metric-name">Cliques no Link</td>
-          <td>246</td>
-          <td class="day-best">925</td>
-          <td>1.005</td>
-          <td>1.167</td>
-          <td>1.115</td>
-          <td>1.318</td>
-          <td>1.135</td>
-          <td>1.213</td>
-          <td>759</td>
-          <td class="col-total">8.883</td>
-        </tr>
-        <tr>
-          <td class="metric-name">CPC no Link</td>
-          <td class="cpl-bad">R$ 1,00</td>
-          <td class="day-best">R$ 0,67</td>
-          <td class="cpl-good">R$ 0,57</td>
-          <td>R$ 0,66</td>
-          <td>R$ 0,71</td>
-          <td>R$ 0,78</td>
-          <td>R$ 0,77</td>
-          <td>R$ 0,78</td>
-          <td>R$ 0,88</td>
-          <td class="col-total">R$ 0,73</td>
-        </tr>
-        <tr>
-          <td class="metric-name">CTR <small>todos</small></td>
-          <td>2,27%</td>
-          <td class="day-best">3,68%</td>
-          <td>3,34%</td>
-          <td>3,58%</td>
-          <td>3,59%</td>
-          <td>3,10%</td>
-          <td>3,21%</td>
-          <td>3,48%</td>
-          <td>3,25%</td>
-          <td class="col-total">3,34%</td>
-        </tr>
-        <tr>
-          <td class="metric-name">CTR do Link</td>
-          <td>1,49%</td>
-          <td class="day-best">2,25%</td>
-          <td>1,92%</td>
-          <td>2,26%</td>
-          <td>2,23%</td>
-          <td>1,80%</td>
-          <td>1,82%</td>
-          <td>2,04%</td>
-          <td>1,94%</td>
-          <td class="col-total">1,99%</td>
-        </tr>
-
-        <!-- PÁGINA -->
-        <tr class="cat-row"><td class="metric-name" colspan="11">📄 Página de Captura</td></tr>
-        <tr>
-          <td class="metric-name">Visualizações de Página</td>
-          <td>171</td>
-          <td class="day-best">747</td>
-          <td>734</td>
-          <td>932</td>
-          <td>850</td>
-          <td>969</td>
-          <td>833</td>
-          <td>887</td>
-          <td>543</td>
-          <td class="col-total">6.666</td>
-        </tr>
-        <tr>
-          <td class="metric-name">Connect Rate <small>vis ÷ cliques</small></td>
-          <td class="cpl-warn">69,5%</td>
-          <td class="day-best cpl-good">80,8%</td>
-          <td>73,0%</td>
-          <td>79,9%</td>
-          <td>76,2%</td>
-          <td>73,5%</td>
-          <td>73,4%</td>
-          <td>73,1%</td>
-          <td>71,5%</td>
-          <td class="col-total">75,0%</td>
-        </tr>
-        <tr>
-          <td class="metric-name">Custo por Vis. de Página</td>
-          <td class="cpl-bad">R$ 1,44</td>
-          <td class="day-best cpl-good">R$ 0,83</td>
-          <td class="cpl-good">R$ 0,78</td>
-          <td>R$ 0,83</td>
-          <td>R$ 0,93</td>
-          <td>R$ 1,05</td>
-          <td>R$ 1,05</td>
-          <td>R$ 1,07</td>
-          <td>R$ 1,23</td>
-          <td class="col-total">R$ 0,98</td>
-        </tr>
-
-        <!-- LEADS -->
-        <tr class="cat-row"><td class="metric-name" colspan="11">🎯 Conversão</td></tr>
-        <tr class="row-hl">
-          <td class="metric-name">Leads</td>
-          <td>48</td>
-          <td class="day-best">406</td>
-          <td>324</td>
-          <td>430</td>
-          <td>399</td>
-          <td>441</td>
-          <td>316</td>
-          <td>381</td>
-          <td>243</td>
-          <td class="col-total">2.988</td>
-        </tr>
-        <tr class="row-hl">
-          <td class="metric-name">CPL <small>custo por lead</small></td>
-          <td class="cpl-bad">R$ 5,13</td>
-          <td class="day-best cpl-good">R$ 1,53</td>
-          <td class="cpl-good">R$ 1,76</td>
-          <td class="cpl-good">R$ 1,80</td>
-          <td class="cpl-good">R$ 1,98</td>
-          <td class="cpl-warn">R$ 2,32</td>
-          <td class="cpl-warn">R$ 2,77</td>
-          <td class="cpl-warn">R$ 2,49</td>
-          <td class="cpl-warn">R$ 2,75</td>
-          <td class="col-total">R$ 2,18</td>
-        </tr>
-        <tr>
-          <td class="metric-name">CPL c/ imposto <small>+13,83%</small></td>
-          <td class="cpl-bad">R$ 5,84</td>
-          <td class="day-best cpl-good">R$ 1,74</td>
-          <td class="cpl-good">R$ 2,00</td>
-          <td class="cpl-good">R$ 2,05</td>
-          <td class="cpl-good">R$ 2,26</td>
-          <td class="cpl-warn">R$ 2,64</td>
-          <td class="cpl-warn">R$ 3,16</td>
-          <td class="cpl-warn">R$ 2,83</td>
-          <td class="cpl-warn">R$ 3,13</td>
-          <td class="col-total">R$ 2,48</td>
-        </tr>
+        <tr class="cat-row"><td class="metric-name" colspan="12">💰 Investimento</td></tr>
+        <tr class="row-hl"><td class="metric-name">Investimento</td><td>246</td><td class="day-best">621</td><td>569</td><td>773</td><td>792</td><td>1.022</td><td>876</td><td>948</td><td>1.168</td><td>869</td><td class="col-total">7.885</td></tr>
+        <tr><td class="metric-name">Invest. c/ imp. <small>+13,83%</small></td><td>280</td><td class="day-best">707</td><td>648</td><td>880</td><td>902</td><td>1.163</td><td>997</td><td>1.079</td><td>1.330</td><td>989</td><td class="col-total">8.976</td></tr>
+        <tr class="cat-row"><td class="metric-name" colspan="12">📡 Alcance & Entrega</td></tr>
+        <tr><td class="metric-name">Impressões</td><td>16.494</td><td class="day-best">41.191</td><td>52.350</td><td>51.618</td><td>50.014</td><td>73.408</td><td>62.314</td><td>59.501</td><td>77.836</td><td>61.985</td><td class="col-total">546.711</td></tr>
+        <tr><td class="metric-name">CPM</td><td class="cpl-warn">14,94</td><td class="day-best">15,09</td><td class="cpl-good">10,87</td><td>14,97</td><td>15,84</td><td class="cpl-good">13,92</td><td>14,06</td><td>15,93</td><td>15,01</td><td>14,02</td><td class="col-total">14,42</td></tr>
+        <tr><td class="metric-name">Alcance</td><td>16.327</td><td class="day-best">35.822</td><td>48.779</td><td>47.974</td><td>46.957</td><td>69.396</td><td>58.301</td><td>57.500</td><td>73.044</td><td>57.649</td><td class="col-total">~441K†</td></tr>
+        <tr><td class="metric-name">Frequência</td><td>1,01×</td><td class="day-best">1,15×</td><td>1,07×</td><td>1,08×</td><td>1,07×</td><td>1,06×</td><td>1,07×</td><td>1,03×</td><td>1,07×</td><td>1,08×</td><td class="col-total">1,24×†</td></tr>
+        <tr class="cat-row"><td class="metric-name" colspan="12">🎬 Vídeo & Clique</td></tr>
+        <tr><td class="metric-name">Hook Rate <small>3s ÷ impr.</small></td><td>33,9%</td><td class="day-best">32,5%</td><td>35,5%</td><td>36,3%</td><td>35,0%</td><td>34,6%</td><td>36,3%</td><td class="cpl-good">37,9%</td><td>28,7%</td><td class="cpl-bad">16,7%‡</td><td class="col-total">32,4%</td></tr>
+        <tr class="row-hl"><td class="metric-name">Cliques no Link</td><td>246</td><td class="day-best">925</td><td>1.005</td><td>1.167</td><td>1.115</td><td>1.318</td><td>1.135</td><td>1.213</td><td>1.404</td><td>1.031</td><td class="col-total">10.559</td></tr>
+        <tr><td class="metric-name">CPC no Link</td><td class="cpl-bad">1,00</td><td class="day-best">0,67</td><td class="cpl-good">0,57</td><td>0,66</td><td>0,71</td><td>0,78</td><td>0,77</td><td>0,78</td><td>0,83</td><td>0,84</td><td class="col-total">0,75</td></tr>
+        <tr><td class="metric-name">CTR <small>todos</small></td><td>2,27%</td><td class="day-best">3,68%</td><td>3,34%</td><td>3,58%</td><td>3,59%</td><td>3,10%</td><td>3,21%</td><td>3,47%</td><td>3,05%</td><td>2,54%</td><td class="col-total">3,21%</td></tr>
+        <tr><td class="metric-name">CTR do Link</td><td>1,49%</td><td class="day-best">2,25%</td><td>1,92%</td><td>2,26%</td><td>2,23%</td><td>1,80%</td><td>1,82%</td><td>2,04%</td><td>1,80%</td><td>1,66%</td><td class="col-total">1,93%</td></tr>
+        <tr class="cat-row"><td class="metric-name" colspan="12">📄 Página de Captura</td></tr>
+        <tr><td class="metric-name">Visualizações de Página</td><td>171</td><td class="day-best">747</td><td>734</td><td>932</td><td>850</td><td>969</td><td>833</td><td>887</td><td>1.008</td><td>801</td><td class="col-total">7.932</td></tr>
+        <tr><td class="metric-name">Connect Rate <small>vis ÷ cliques</small></td><td class="cpl-warn">69,4%</td><td class="day-best cpl-good">80,7%</td><td>73,0%</td><td>79,8%</td><td>76,3%</td><td>73,5%</td><td>73,4%</td><td>73,2%</td><td>71,8%</td><td>77,7%</td><td class="col-total">75,1%</td></tr>
+        <tr><td class="metric-name">Custo por Vis. de Página</td><td class="cpl-bad">1,44</td><td class="day-best cpl-good">0,83</td><td class="cpl-good">0,78</td><td>0,83</td><td>0,93</td><td>1,05</td><td>1,05</td><td>1,07</td><td>1,16</td><td>1,08</td><td class="col-total">0,99</td></tr>
+        <tr class="cat-row"><td class="metric-name" colspan="12">🎯 Conversão</td></tr>
+        <tr class="row-hl"><td class="metric-name">Leads</td><td>48</td><td class="day-best">406</td><td>324</td><td>430</td><td>399</td><td>441</td><td>316</td><td>381</td><td>453</td><td>411</td><td class="col-total">3.609</td></tr>
+        <tr class="row-hl"><td class="metric-name">CPL <small>custo por lead</small></td><td class="cpl-bad">5,13</td><td class="day-best cpl-good">1,53</td><td class="cpl-good">1,76</td><td class="cpl-good">1,80</td><td class="cpl-good">1,98</td><td class="cpl-warn">2,32</td><td class="cpl-warn">2,77</td><td class="cpl-warn">2,49</td><td class="cpl-warn">2,58</td><td class="cpl-warn">2,11</td><td class="col-total">2,18</td></tr>
+        <tr><td class="metric-name">CPL c/ imposto <small>+13,83%</small></td><td class="cpl-bad">5,84</td><td class="day-best cpl-good">1,74</td><td class="cpl-good">2,00</td><td class="cpl-good">2,05</td><td class="cpl-good">2,26</td><td class="cpl-warn">2,64</td><td class="cpl-warn">3,16</td><td class="cpl-warn">2,83</td><td class="cpl-warn">2,94</td><td class="cpl-warn">2,41</td><td class="col-total">2,49</td></tr>
       </tbody>
     </table>
   </div>
   <p class="table-note">
-    <strong>* 21/Jun é parcial</strong> — snapshot às 17h53. &nbsp;
-    <strong>† Alcance e frequência</strong> do período são desduplicados (alcance não é soma dos dias; frequência é média do período). &nbsp;
-    A partir de <strong>18/Jun</strong> entraram 4 campanhas novas ([04][05][06] criativos novos + [07] FRIO LL1%), o que coincide com o platô alto do CPL (aprendizado dos novos conjuntos + saturação). Visualizações de página estimadas via custo por landing page view do Meta.
+    <strong>* 22/Jun parcial</strong> e em <strong>otimização de criativos</strong> (troca de anúncios hoje). <strong>‡ Hook Rate de 21–22/Jun distorcido</strong> pelo reaprendizado — ignore esses dois pontos; a leitura limpa volta em 2–3 dias. &nbsp;
+    <strong>† Alcance/frequência</strong> do total são desduplicados (não somam os dias). Visualizações de página estimadas via custo por landing page view.
   </p>
 
-  <!-- TOP CRIATIVOS -->
-  <div class="section-title">Criativos · Do que mais converteu ao que menos converteu (Total 13–21 Jun)</div>
+  <div class="section-title">Criativos · Do que mais converteu ao que menos converteu (Total 13–22 Jun)</div>
   <div class="cre-wrap">
     <table class="cre">
       <thead>
-        <tr>
-          <th>#</th>
-          <th class="name-col">Criativo <span style="font-weight:400;text-transform:none;color:var(--purple-soft)">(clique → Drive)</span></th>
-          <th class="lead-col">Leads</th>
-          <th>CPL</th>
-          <th>CTR</th>
-          <th>Vis. Página</th>
-          <th>Custo/Vis.</th>
-          <th>Connect Rate</th>
-          <th>Investido</th>
-        </tr>
+        <tr><th>#</th><th class="name-col">Criativo <span style="font-weight:400;text-transform:none;color:var(--purple-soft)">(clique → Drive)</span></th><th class="lead-col">Leads</th><th>CPL</th><th>CTR</th><th>Vis. Pág.</th><th>Custo/Vis.</th><th>Connect</th><th>Investido</th></tr>
       </thead>
       <tbody>
-        <tr class="top1">
-          <td class="cre-rank">1</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV07_BNCP002_CAP_A BNCC_0.49 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">1.578</td>
-          <td class="cpl-warn">R$ 2,16</td>
-          <td>3,74%</td>
-          <td>3.561</td>
-          <td>R$ 0,96</td>
-          <td>74,8%</td>
-          <td>R$ 3.406</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">2</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV05_BNCP002_CAP_BNCC COMPUTACAO2_0.52 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">948</td>
-          <td class="cpl-good">R$ 1,94</td>
-          <td>2,96%</td>
-          <td>2.062</td>
-          <td>R$ 0,89</td>
-          <td>77,1%</td>
-          <td>R$ 1.836</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">3</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV21_BNCP002_CAP_COLOCAR NA PRATICA_1.03 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">138</td>
-          <td class="cpl-warn">R$ 2,92</td>
-          <td>2,94%</td>
-          <td>299</td>
-          <td>R$ 1,35</td>
-          <td>68,6%</td>
-          <td>R$ 403</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">4</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV06_BNCP002_CAP_CONVITE_0.32 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">45</td>
-          <td class="cpl-good">R$ 1,95</td>
-          <td>2,97%</td>
-          <td>90</td>
-          <td>R$ 0,97</td>
-          <td>75,0%</td>
-          <td>R$ 88</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">5</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV09_BNCP002_CAP_TODA PROFESSORA_0.38 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">41</td>
-          <td class="cpl-good">R$ 1,64</td>
-          <td>2,83%</td>
-          <td>69</td>
-          <td>R$ 0,97</td>
-          <td>76,7%</td>
-          <td>R$ 67</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">6</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV04_BNCP002_CAP_BNCC COMPUTACAO 1_0.46 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">29</td>
-          <td class="cpl-good">R$ 1,82</td>
-          <td>4,04%</td>
-          <td>67</td>
-          <td>R$ 0,79</td>
-          <td class="cpl-good">79,8%</td>
-          <td>R$ 53</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">7</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV02_BNCP002_CAP_FICOU SABENDO_0.40 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">21</td>
-          <td class="cpl-warn">R$ 3,37</td>
-          <td>2,41%</td>
-          <td>56</td>
-          <td>R$ 1,26</td>
-          <td>70,9%</td>
-          <td>R$ 71</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">8</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV03_BNCP002_CAP_ATUALIZACOES 1_0.37 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">21</td>
-          <td class="cpl-warn">R$ 2,28</td>
-          <td>2,87%</td>
-          <td>40</td>
-          <td>R$ 1,20</td>
-          <td>67,8%</td>
-          <td>R$ 48</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">9</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV38_BNCP002_CAP_VERMELHO_0.59 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">19</td>
-          <td class="cpl-warn">R$ 2,66</td>
-          <td>2,95%</td>
-          <td>40</td>
-          <td>R$ 1,26</td>
-          <td>75,5%</td>
-          <td>R$ 51</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">10</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV13_BNCP002_CAP_ENTROU EM VIGOR_0.42 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">17</td>
-          <td class="cpl-good">R$ 1,28</td>
-          <td>3,15%</td>
-          <td>26</td>
-          <td>R$ 0,84</td>
-          <td>68,4%</td>
-          <td>R$ 22</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">11</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV24_BNCP002_CAP_BANCO_0.57 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">16</td>
-          <td class="cpl-bad">R$ 3,76</td>
-          <td>3,44%</td>
-          <td>41</td>
-          <td>R$ 1,47</td>
-          <td>67,2%</td>
-          <td>R$ 60</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">12</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV12_BNCP002_CAP_COMPUTACAO 3_0.57 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">13</td>
-          <td class="cpl-warn">R$ 2,28</td>
-          <td>3,59%</td>
-          <td>22</td>
-          <td>R$ 1,35</td>
-          <td>66,7%</td>
-          <td>R$ 30</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">13</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV08_BNCP002_CAP_ATUALIZACOES 2_0.56 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">11</td>
-          <td class="cpl-bad">R$ 6,00</td>
-          <td>2,70%</td>
-          <td>51</td>
-          <td>R$ 1,30</td>
-          <td>73,9%</td>
-          <td>R$ 66</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">14</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV01_BNCP002_CAP_PROFESSORA 1_0.43 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">10</td>
-          <td class="cpl-warn">R$ 3,04</td>
-          <td>3,29%</td>
-          <td>30</td>
-          <td>R$ 1,01</td>
-          <td>69,8%</td>
-          <td>R$ 30</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">15</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV23_BNCP002_CAP_PROFESSORA_0.46 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">10</td>
-          <td class="cpl-warn">R$ 2,14</td>
-          <td>3,26%</td>
-          <td>18</td>
-          <td>R$ 1,19</td>
-          <td>78,3%</td>
-          <td>R$ 21</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">16</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV14_BNCP002_CAP_COMPUTACAO 4_0.42 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">9</td>
-          <td class="cpl-good">R$ 1,20</td>
-          <td>3,58%</td>
-          <td>12</td>
-          <td>R$ 0,90</td>
-          <td>70,6%</td>
-          <td>R$ 11</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">17</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV22_BNCP002_CAP_LIVROS_0.54 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">8</td>
-          <td class="cpl-warn">R$ 3,26</td>
-          <td>4,29%</td>
-          <td>24</td>
-          <td>R$ 1,09</td>
-          <td>75,0%</td>
-          <td>R$ 26</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">18</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV10_BNCP002_CAP_PLANO DE AULA_0.43 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">8</td>
-          <td class="cpl-warn">R$ 2,39</td>
-          <td>3,40%</td>
-          <td>19</td>
-          <td>R$ 1,01</td>
-          <td>79,2%</td>
-          <td>R$ 19</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">19</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV16_BNCP002_CAP_ENTENDER_0.45 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">6</td>
-          <td class="cpl-good">R$ 1,06</td>
-          <td>4,05%</td>
-          <td>8</td>
-          <td>R$ 0,79</td>
-          <td class="cpl-good">88,9%</td>
-          <td>R$ 6</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">20</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV18_BNCP002_CAP_ENTROU EM VIGOR 1_0.48 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">5</td>
-          <td class="cpl-bad">R$ 7,19</td>
-          <td>3,36%</td>
-          <td>20</td>
-          <td>R$ 1,80</td>
-          <td class="cpl-good">83,3%</td>
-          <td>R$ 36</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">21</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV30_BNCP002_CAP_PROFESSORA_0.33 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">4</td>
-          <td class="cpl-bad">R$ 5,77</td>
-          <td>3,12%</td>
-          <td>16</td>
-          <td>R$ 1,44</td>
-          <td>59,3%</td>
-          <td>R$ 23</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">22</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV20_BNCP002_CAP_DESENVOLVER_1.00 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">4</td>
-          <td class="cpl-warn">R$ 2,36</td>
-          <td>4,62%</td>
-          <td>9</td>
-          <td>R$ 1,05</td>
-          <td>64,3%</td>
-          <td>R$ 9</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">23</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV37_BNCP002_CAP_JA ENTROU_0.54 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">4</td>
-          <td class="cpl-good">R$ 1,65</td>
-          <td>3,66%</td>
-          <td>6</td>
-          <td>R$ 1,10</td>
-          <td>75,0%</td>
-          <td>R$ 7</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">24</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV27_BNCP002_CAP_VOCE FICOU_0.48 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">3</td>
-          <td class="cpl-good">R$ 1,54</td>
-          <td>2,36%</td>
-          <td>3</td>
-          <td>R$ 1,54</td>
-          <td>75,0%</td>
-          <td>R$ 5</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">25</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV11_BNCP002_CAP_ENTROU EM VIGOR_0.45 <span class="drv">🔗</span></a></td>
-          <td class="cre-lead">3</td>
-          <td class="cpl-good">R$ 1,13</td>
-          <td>4,57%</td>
-          <td>4</td>
-          <td>R$ 0,84</td>
-          <td class="cpl-good">100%</td>
-          <td>R$ 3</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">26</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV19_BNCP002_CAP_ENTROU EM VIGOR 2_0.48 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">2</td>
-          <td class="cpl-bad">R$ 4,06</td>
-          <td>2,50%</td>
-          <td>8</td>
-          <td>R$ 1,01</td>
-          <td class="cpl-good">88,9%</td>
-          <td>R$ 8</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">27</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADI03_BNCP002_CAP_EVENTO GRATUITA <span class="drv">🔗</span></a><span class="cre-new">NOVO · imagem</span></td>
-          <td class="cre-lead">2</td>
-          <td class="cpl-warn">R$ 2,67</td>
-          <td>3,01%</td>
-          <td>3</td>
-          <td>R$ 1,78</td>
-          <td>50,0%</td>
-          <td>R$ 5</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">28</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV41_BNCP002_CAP_BOLO_0.54 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">2</td>
-          <td class="cpl-good">R$ 1,62</td>
-          <td>3,44%</td>
-          <td>3</td>
-          <td>R$ 1,08</td>
-          <td>50,0%</td>
-          <td>R$ 3</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">29</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADI01_BNCP002_CAP_ENSINO QUE TRANSFORMA <span class="drv">🔗</span></a><span class="cre-new">NOVO · imagem</span></td>
-          <td class="cre-lead">2</td>
-          <td class="cpl-good">R$ 1,54</td>
-          <td>2,54%</td>
-          <td>3</td>
-          <td>R$ 1,03</td>
-          <td class="cpl-good">100%</td>
-          <td>R$ 3</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">30</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV40_BNCP002_CAP_BNCC COMPUTACAO_0.40 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">1</td>
-          <td class="cpl-bad">R$ 4,98</td>
-          <td>0,64%</td>
-          <td>2</td>
-          <td>R$ 2,49</td>
-          <td class="cpl-good">100%</td>
-          <td>R$ 5</td>
-        </tr>
-        <tr>
-          <td class="cre-rank">31</td>
-          <td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV25_BNCP002_CAP_ATUALIZACOES 4_0.43 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td>
-          <td class="cre-lead">1</td>
-          <td class="cpl-good">R$ 0,93</td>
-          <td>1,69%</td>
-          <td>1</td>
-          <td>R$ 0,93</td>
-          <td class="cpl-good">100%</td>
-          <td>R$ 1</td>
-        </tr>
-        <tr class="cre-total">
-          <td></td>
-          <td class="cre-name">TOTAL · 31 criativos</td>
-          <td class="cre-lead">2.981</td>
-          <td>R$ 2,15</td>
-          <td>3,35%</td>
-          <td>6.613</td>
-          <td>R$ 0,97</td>
-          <td>75,1%</td>
-          <td>R$ 6.423</td>
-        </tr>
+        <tr class="top1"><td class="cre-rank">1</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV07_BNCP002_CAP_A BNCC_0.49 <span class="drv">🔗</span></a></td><td class="cre-lead">1.750</td><td class="cpl-warn">R$ 2,21</td><td>3,76%</td><td>3.934</td><td>R$ 0,98</td><td>74,8%</td><td>R$ 3.861</td></tr>
+        <tr><td class="cre-rank">2</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV05_BNCP002_CAP_BNCC COMPUTACAO2_0.52 <span class="drv">🔗</span></a></td><td class="cre-lead">1.059</td><td class="cpl-good">R$ 2,00</td><td>2,90%</td><td>2.336</td><td>R$ 0,91</td><td>76,1%</td><td>R$ 2.122</td></tr>
+        <tr><td class="cre-rank">3</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADI03_BNCP002_CAP_EVENTO GRATUITA <span class="drv">🔗</span></a><span class="cre-new">NOVO · imagem</span></td><td class="cre-lead">267</td><td class="cpl-good">R$ 1,54</td><td>2,09%</td><td>460</td><td>R$ 0,89</td><td>78,6%</td><td>R$ 411</td></tr>
+        <tr><td class="cre-rank">4</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV21_BNCP002_CAP_COLOCAR NA PRATICA_1.03 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">138</td><td class="cpl-warn">R$ 2,93</td><td>2,94%</td><td>299</td><td>R$ 1,35</td><td>68,5%</td><td>R$ 404</td></tr>
+        <tr><td class="cre-rank">5</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV06_BNCP002_CAP_CONVITE_0.32 <span class="drv">🔗</span></a></td><td class="cre-lead">46</td><td class="cpl-good">R$ 1,94</td><td>3,00%</td><td>91</td><td>R$ 0,98</td><td>74,6%</td><td>R$ 89</td></tr>
+        <tr><td class="cre-rank">6</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV09_BNCP002_CAP_TODA PROFESSORA_0.38 <span class="drv">🔗</span></a></td><td class="cre-lead">45</td><td class="cpl-good">R$ 1,66</td><td>2,86%</td><td>78</td><td>R$ 0,96</td><td>76,6%</td><td>R$ 75</td></tr>
+        <tr><td class="cre-rank">7</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADI01_BNCP002_CAP_ENSINO QUE TRANSFORMA <span class="drv">🔗</span></a><span class="cre-new">NOVO · imagem</span></td><td class="cre-lead">44</td><td class="cpl-good">R$ 1,95</td><td>1,72%</td><td>78</td><td>R$ 1,10</td><td class="cpl-good">84,5%</td><td>R$ 86</td></tr>
+        <tr><td class="cre-rank">8</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV04_BNCP002_CAP_BNCC COMPUTACAO 1_0.46 <span class="drv">🔗</span></a></td><td class="cre-lead">31</td><td class="cpl-warn">R$ 2,01</td><td>3,93%</td><td>78</td><td>R$ 0,80</td><td class="cpl-good">81,6%</td><td>R$ 62</td></tr>
+        <tr><td class="cre-rank">9</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV24_BNCP002_CAP_BANCO_0.57 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">25</td><td class="cpl-bad">R$ 3,99</td><td>3,41%</td><td>64</td><td>R$ 1,56</td><td>66,6%</td><td>R$ 100</td></tr>
+        <tr><td class="cre-rank">10</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV02_BNCP002_CAP_FICOU SABENDO_0.40 <span class="drv">🔗</span></a></td><td class="cre-lead">22</td><td class="cpl-warn">R$ 3,22</td><td>2,43%</td><td>57</td><td>R$ 1,24</td><td>71,3%</td><td>R$ 71</td></tr>
+        <tr><td class="cre-rank">11</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV03_BNCP002_CAP_ATUALIZACOES 1_0.37 <span class="drv">🔗</span></a></td><td class="cre-lead">21</td><td class="cpl-warn">R$ 2,29</td><td>2,87%</td><td>40</td><td>R$ 1,20</td><td>67,6%</td><td>R$ 48</td></tr>
+        <tr><td class="cre-rank">12</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV38_BNCP002_CAP_VERMELHO_0.59 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">19</td><td class="cpl-warn">R$ 2,67</td><td>2,91%</td><td>40</td><td>R$ 1,26</td><td>75,7%</td><td>R$ 51</td></tr>
+        <tr><td class="cre-rank">13</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV13_BNCP002_CAP_ENTROU EM VIGOR_0.42 <span class="drv">🔗</span></a></td><td class="cre-lead">17</td><td class="cpl-good">R$ 1,28</td><td>3,14%</td><td>26</td><td>R$ 0,84</td><td>68,2%</td><td>R$ 22</td></tr>
+        <tr><td class="cre-rank">14</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV12_BNCP002_CAP_COMPUTACAO 3_0.57 <span class="drv">🔗</span></a></td><td class="cre-lead">13</td><td class="cpl-warn">R$ 2,28</td><td>3,59%</td><td>22</td><td>R$ 1,35</td><td>66,5%</td><td>R$ 30</td></tr>
+        <tr><td class="cre-rank">15</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV37_BNCP002_CAP_JA ENTROU_0.54 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">11</td><td class="cpl-warn">R$ 2,70</td><td>3,15%</td><td>21</td><td>R$ 1,42</td><td>80,7%</td><td>R$ 30</td></tr>
+        <tr><td class="cre-rank">16</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV23_BNCP002_CAP_PROFESSORA_0.46 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">11</td><td class="cpl-warn">R$ 2,29</td><td>3,16%</td><td>21</td><td>R$ 1,20</td><td>77,9%</td><td>R$ 25</td></tr>
+        <tr><td class="cre-rank">17</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV08_BNCP002_CAP_ATUALIZACOES 2_0.56 <span class="drv">🔗</span></a></td><td class="cre-lead">11</td><td class="cpl-bad">R$ 6,01</td><td>2,70%</td><td>51</td><td>R$ 1,30</td><td>73,9%</td><td>R$ 66</td></tr>
+        <tr><td class="cre-rank">18</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV01_BNCP002_CAP_PROFESSORA 1_0.43 <span class="drv">🔗</span></a></td><td class="cre-lead">10</td><td class="cpl-warn">R$ 3,04</td><td>3,29%</td><td>30</td><td>R$ 1,01</td><td>69,8%</td><td>R$ 30</td></tr>
+        <tr><td class="cre-rank">19</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV10_BNCP002_CAP_PLANO DE AULA_0.43 <span class="drv">🔗</span></a></td><td class="cre-lead">9</td><td class="cpl-warn">R$ 2,92</td><td>2,88%</td><td>24</td><td>R$ 1,10</td><td>77,3%</td><td>R$ 26</td></tr>
+        <tr><td class="cre-rank">20</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV14_BNCP002_CAP_COMPUTACAO 4_0.42 <span class="drv">🔗</span></a></td><td class="cre-lead">9</td><td class="cpl-good">R$ 1,21</td><td>3,56%</td><td>12</td><td>R$ 0,91</td><td>70,8%</td><td>R$ 11</td></tr>
+        <tr><td class="cre-rank">21</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV22_BNCP002_CAP_LIVROS_0.54 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">9</td><td class="cpl-bad">R$ 4,23</td><td>4,37%</td><td>32</td><td>R$ 1,19</td><td>78,1%</td><td>R$ 38</td></tr>
+        <tr><td class="cre-rank">22</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV18_BNCP002_CAP_ENTROU EM VIGOR 1_0.48 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">6</td><td class="cpl-bad">R$ 6,82</td><td>3,60%</td><td>23</td><td>R$ 1,78</td><td class="cpl-good">81,9%</td><td>R$ 41</td></tr>
+        <tr><td class="cre-rank">23</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV16_BNCP002_CAP_ENTENDER_0.45 <span class="drv">🔗</span></a></td><td class="cre-lead">6</td><td class="cpl-good">R$ 1,06</td><td>4,04%</td><td>8</td><td>R$ 0,80</td><td class="cpl-good">88,3%</td><td>R$ 6</td></tr>
+        <tr><td class="cre-rank">24</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV30_BNCP002_CAP_PROFESSORA_0.33 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">4</td><td class="cpl-bad">R$ 5,87</td><td>3,20%</td><td>16</td><td>R$ 1,47</td><td>59,2%</td><td>R$ 23</td></tr>
+        <tr><td class="cre-rank">25</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV11_BNCP002_CAP_ENTROU EM VIGOR_0.45 <span class="drv">🔗</span></a></td><td class="cre-lead">4</td><td class="cpl-good">R$ 1,83</td><td>2,99%</td><td>5</td><td>R$ 1,47</td><td class="cpl-good">82,9%</td><td>R$ 7</td></tr>
+        <tr><td class="cre-rank">26</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADI02_BNCP002_CAP_APRENDA <span class="drv">🔗</span></a><span class="cre-new">NOVO · imagem</span></td><td class="cre-lead">4</td><td class="cpl-bad">R$ 4,67</td><td>2,72%</td><td>7</td><td>R$ 2,66</td><td>63,8%</td><td>R$ 19</td></tr>
+        <tr><td class="cre-rank">27</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV41_BNCP002_CAP_BOLO_0.54 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">4</td><td class="cpl-warn">R$ 2,33</td><td>2,93%</td><td>7</td><td>R$ 1,33</td><td>63,8%</td><td>R$ 9</td></tr>
+        <tr><td class="cre-rank">28</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV20_BNCP002_CAP_DESENVOLVER_1.00 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">4</td><td class="cpl-warn">R$ 2,36</td><td>4,62%</td><td>9</td><td>R$ 1,05</td><td>64,4%</td><td>R$ 9</td></tr>
+        <tr><td class="cre-rank">29</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV27_BNCP002_CAP_VOCE FICOU_0.48 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">3</td><td class="cpl-good">R$ 1,91</td><td>2,03%</td><td>3</td><td>R$ 1,91</td><td>74,9%</td><td>R$ 6</td></tr>
+        <tr><td class="cre-rank">30</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV19_BNCP002_CAP_ENTROU EM VIGOR 2_0.48 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">2</td><td class="cpl-bad">R$ 4,06</td><td>2,50%</td><td>8</td><td>R$ 1,02</td><td class="cpl-good">88,5%</td><td>R$ 8</td></tr>
+        <tr><td class="cre-rank">31</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV40_BNCP002_CAP_BNCC COMPUTACAO_0.40 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">2</td><td class="cpl-warn">R$ 2,56</td><td>0,93%</td><td>3</td><td>R$ 1,71</td><td class="cpl-good">100%</td><td>R$ 5</td></tr>
+        <tr><td class="cre-rank">32</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV25_BNCP002_CAP_ATUALIZACOES 4_0.43 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">1</td><td class="cpl-warn">R$ 2,73</td><td>2,68%</td><td>2</td><td>R$ 1,36</td><td class="cpl-good">100%</td><td>R$ 3</td></tr>
+        <tr><td class="cre-rank">33</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV36_BNCP002_CAP_PROFESSORA_0.34 <span class="drv">🔗</span></a><span class="cre-new">NOVO</span></td><td class="cre-lead">1</td><td class="cpl-warn">R$ 2,45</td><td>2,48%</td><td>1</td><td>R$ 2,45</td><td class="cpl-good">100%</td><td>R$ 2</td></tr>
+        <tr><td class="cre-rank">34</td><td class="cre-name"><a href="https://drive.google.com/drive/folders/1gNcfytaSq9JTKEaBk57p8p0kvW7Vdhqa" target="_blank" rel="noopener">ADV15_BNCP002_CAP_COLOCADA_1.02 <span class="drv">🔗</span></a></td><td class="cre-lead">1</td><td class="cpl-good">R$ 0,53</td><td>3,85%</td><td>1</td><td>R$ 0,53</td><td class="cpl-good">100%</td><td>R$ 1</td></tr>
+        <tr class="cre-total"><td></td><td class="cre-name">TOTAL · 34 criativos</td><td class="cre-lead">3.609</td><td>R$ 2,16</td><td>3,22%</td><td>7.888</td><td>R$ 0,99</td><td>75,1%</td><td>R$ 7.796</td></tr>
       </tbody>
     </table>
   </div>
   <p class="table-note">
-    📁 Números somados por criativo (cada um roda em vários conjuntos das 7 campanhas). Clique no nome para abrir a <strong>pasta no Drive</strong>. A tag <span class="cre-new" style="margin:0">NOVO</span> = criativos que entraram a partir de 18/Jun (incl. os de imagem <strong>ADI</strong>). &nbsp;
-    O total de criativos (nível anúncio = <strong>2.981</strong>) fica ~0,2% abaixo do total de campanha (2.988) por diferença de atribuição do Meta entre os níveis — normal. &nbsp;
-    🏆 <strong>ADV07 + ADV05</strong> = <strong>85% dos leads</strong>. 🆕 Destaques da 2ª leva: <strong>ADV21</strong> (138 leads), <strong>ADV38 Vermelho</strong> (19) e <strong>ADV24 Banco</strong> (16). &nbsp;
-    ⚠️ Revisar: <strong>ADV18</strong> (R$7,19), <strong>ADV08</strong> (R$6,00), <strong>ADV30</strong> (R$5,77).
+    📁 Somado por criativo (cada um roda em vários conjuntos). Clique no nome → pasta no Drive. <span class="cre-new" style="margin:0">NOVO</span> = entrou a partir de 18/Jun (incl. imagem <strong>ADI</strong>). Total de criativos (nível anúncio) = 3.609 leads, idêntico ao total de campanha. &nbsp;
+    🏆 <strong>ADV07 + ADV05 = 78% dos leads.</strong> 🆕 <strong>ADI03 (imagem)</strong> é o destaque: 267 leads a <strong>R$1,54</strong> — escalar. &nbsp;
+    ⚠️ Desligar: <strong>ADV18</strong> (R$6,82), <strong>ADV08</strong> (R$6,01), <strong>ADV30</strong> (R$5,87), <strong>ADI02</strong> (R$4,67), <strong>ADV22</strong> (R$4,23), <strong>ADV19/ADV24</strong> (~R$4).
   </p>
 
 </main>
 
-<!-- ══════════════ FOOTER ══════════════ -->
 <footer>
-  <strong>VOA CONHECIMENTO · BNCP002</strong> — Atualizado em 21 de Junho de 2026, 17h53<br>
-  Dados: Meta Ads Manager · Campanha de Captação · 7 campanhas ativas · Budget CBO · 31 criativos com leads
+  <strong>VOA CONHECIMENTO · BNCP002</strong> — Atualizado em 22 de Junho de 2026<br>
+  Dados: Meta Ads Manager · Campanha de Captação · ~10 campanhas ativas · Budget CBO · 34 criativos com leads
 </footer>
 
 </body>
